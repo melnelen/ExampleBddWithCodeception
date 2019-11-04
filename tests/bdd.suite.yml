@@ -1,0 +1,14 @@
+actor: BddTester
+modules:
+  enabled:
+    -   Asserts:
+    -   Db:
+    -   WebDriver:
+          url: %URL_WEB%
+          browser: chrome
+          window_size: 1920x1080
+    - \Helper\Bdd
+gherkin:
+  contexts:
+    default:
+      - BddTester

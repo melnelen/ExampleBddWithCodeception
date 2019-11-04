@@ -1,0 +1,7 @@
+vendor
+tests/_output/
+tests/_support/_generated/
+\.idea/
+\.env
+.DS_Store
+.php_cs.cache
