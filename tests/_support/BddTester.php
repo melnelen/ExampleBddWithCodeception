@@ -43,10 +43,10 @@ class BddTester
     }
 
     /**
-     * @Then I see the correct :courseOrPathName
+     * @Then I see the correct :path
      */
-    public function iSeeTheCorrectCourseOrPath($courseOrPathName)
+    public function iSeeTheCorrectCourseOrPath($path)
     {
-        $this->on(SearchPage::class)->seeLearningContent($courseOrPathName, $this->keyword);
+        $this->on(SearchPage::class)->seeLearningContent($path, $this->keyword);
     }
 }
