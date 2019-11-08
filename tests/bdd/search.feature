@@ -1,16 +1,16 @@
 Feature: Search
   As a visitor
-  I want to search for courses and paths
-  In order to find the content I am interested in
+  I want to search for paths
+  In order to find the one that I am interested in
 
-  Scenario Outline: Visitor can find courses and paths
+  Scenario Outline: Visitor can find a path
     Given I am a visitor
     When I am on the "search" page
-    And I filter by <category>
-    And I search by <keyword>
-    Then I see the correct <result>
+      And I filter by <category>
+      And I search by <keyword>
+    Then I see the correct <path>
 
     Examples:
-      | category    | keyword | result                             |
-      | "paths"     | "dev"   | "Junior Web Developer"             |
-      | "courses"   | "css"   | "Create Web Page Layouts With CSS" |
+      | category | keyword | path                   |
+      | "paths"  | "dev"   | "Junior Web Developer" |
+      | "paths"  | "ai"    | "AI Engineer"          |
