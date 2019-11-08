@@ -1,4 +1,4 @@
-# ExmpleBddWithCodeception
+# ExampleBddWithCodeception
 
 This is just an example code for creating automation test code usig Behaviour Driver Development with Codeception. 
 
