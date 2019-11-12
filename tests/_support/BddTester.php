@@ -6,7 +6,13 @@ class BddTester
 {
     use _generated\BddTesterActions;
 
+    protected $searchPage;
     protected $keyword;
+    
+    protected function _inject(SearchPage $searchPage)
+    {
+        $this->searchPage = $searchPage;
+    }
 
     /**
      * @Given I am a visitor
@@ -22,7 +28,6 @@ class BddTester
     public function iAmOnThePage($page)
     {
         $this->amOnPage($page);
-        $this->dismissCookieBanner();
     }
 
     /**
@@ -30,7 +35,7 @@ class BddTester
      */
     public function iFilterByCategoryFilter($category = 'all')
     {
-        $this->visit(SearchPage::class)->addCategoryFilter($category);
+        $this->searchPage->addCategoryFilter($category);
     }
 
     /**
@@ -38,7 +43,7 @@ class BddTester
      */
     public function iSearchByKeyword($keyword)
     {
-        $this->on(SearchPage::class)->search($keyword);
+        $this->searchPage->search($keyword);
         $this->keyword = $keyword;
     }
 
@@ -47,6 +52,6 @@ class BddTester
      */
     public function iSeeTheCorrectCourseOrPath($path)
     {
-        $this->on(SearchPage::class)->seeLearningContent($path, $this->keyword);
+        $this->searchPage->seeLearningContent($path, $this->keyword);
     }
 }
