@@ -33,7 +33,7 @@ class BddTester
     /**
      * @When I filter by :category
      */
-    public function iFilterByCategoryFilter($category = 'all')
+    public function iFilterByCategory($category = 'all')
     {
         $this->searchPage->addCategoryFilter($category);
     }
