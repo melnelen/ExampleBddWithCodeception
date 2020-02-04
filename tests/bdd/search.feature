@@ -11,6 +11,6 @@ Feature: Search
     Then I see the correct <path>
 
     Examples:
-      | category | keyword | path                   |
-      | "paths"  | "dev"   | "Junior Web Developer" |
-      | "paths"  | "ai"    | "AI Engineer"          |
+      | category | keyword | path            |
+      | "paths"  | "dev"   | "Web Developer" |
+      | "paths"  | "ai"    | "AI Engineer"   |
